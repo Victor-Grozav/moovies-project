@@ -1,0 +1,17 @@
+.home-div >*:first-child{
+ border: 1px solid black;
+ width: 10rem;
+ height: 2rem;
+ background-color: rgb(74, 74, 74);
+ color: white;
+ font-weight: bold;
+ border-top-left-radius: 10px;
+ border-top-right-radius: 10px;
+}
+.home-div>*:first-child:active {
+    background-color: #af9b4c;
+    color: white; 
+    transition: background-color 0.1s; 
+    border-top-left-radius: 13px;
+    border-top-right-radius: 13px;
+}

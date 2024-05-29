@@ -1,0 +1,33 @@
+.scroll-container{
+    display: flex;
+    flex-direction: row;
+    border: 1px solid black;
+    overflow-x: auto;
+    scroll-behavior: smooth; 
+    width: 95%; 
+    background-color:#242424;
+}
+.big-scroll-container{
+    display: flex;
+    flex-direction: row;
+    width: 95%;
+}
+.arraws1{
+    background-color: #2b2a2a;
+    border-top-left-radius: 9px;
+    border-bottom-left-radius: 9px;
+    cursor: pointer;
+    padding: 10px;
+    color: white;
+}
+.arraws2{
+    background-color: #2b2a2a;
+    border-top-right-radius: 9px;
+    border-bottom-right-radius: 9px;
+    cursor: pointer;
+    padding: 10px;
+    color: white;
+}
+.scroll-container::-webkit-scrollbar {
+    display: none;
+}

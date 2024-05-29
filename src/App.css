@@ -1,0 +1,22 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.Application{
+   position: relative;
+   display: flex;
+   flex-direction: column;
+}
+
+.second-header{
+  
+    margin-top: 5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.background-all{
+    background-color: rgb(74, 74, 74);
+    height: 100rem;
+}
