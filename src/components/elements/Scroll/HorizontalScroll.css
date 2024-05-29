@@ -16,6 +16,7 @@
     background-color: #2b2a2a;
     border-top-left-radius: 9px;
     border-bottom-left-radius: 9px;
+    font-size: 30px;
     cursor: pointer;
     padding: 10px;
     color: white;
@@ -24,6 +25,7 @@
     background-color: #2b2a2a;
     border-top-right-radius: 9px;
     border-bottom-right-radius: 9px;
+    font-size: 30px;
     cursor: pointer;
     padding: 10px;
     color: white;
