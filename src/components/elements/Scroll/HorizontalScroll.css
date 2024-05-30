@@ -1,16 +1,22 @@
-.scroll-container{
+.scroll-container {
     display: flex;
     flex-direction: row;
     border: 1px solid black;
     overflow-x: auto;
     scroll-behavior: smooth; 
-    width: 95%; 
-    background-color:#242424;
+    width: 95%;
+    background-color: #242424;
+    padding: 10px; 
+    
+}
+.scroll-container > div {
+    margin-right: 10px; 
 }
 .big-scroll-container{
     display: flex;
     flex-direction: row;
     width: 95%;
+    margin-top: 3rem;
 }
 .arraws1{
     background-color: #2b2a2a;

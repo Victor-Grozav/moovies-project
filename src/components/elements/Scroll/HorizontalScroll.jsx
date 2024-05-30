@@ -1,5 +1,5 @@
 import React, { useRef } from "react";
-import CardMovie from "./CardMovie1/CardMovie";
+import CardMovie from "./CardMovie/CardMovie";
 import './HorizontalScroll.css';
 
 function HorizontalScroll() {
@@ -21,21 +21,9 @@ function HorizontalScroll() {
         <div className="big-scroll-container">
             <button className="arraws1" onClick={scrollLeft}>&#8592;</button>
             <div className="scroll-container" ref={scrollContainerRef}>
-                <CardMovie />
-                <CardMovie />
-                <CardMovie />
-                <CardMovie />
-                <CardMovie />
-                <CardMovie />
-                <CardMovie />
-                <CardMovie />
-                <CardMovie />
-                <CardMovie />
-                <CardMovie />
-                <CardMovie />
-                <CardMovie />
-                <CardMovie />
-                <CardMovie />
+                <a href=""><CardMovie /></a>
+                
+               
             </div>
             <button className="arraws2" onClick={scrollRight}>&#8594;</button>
         </div>

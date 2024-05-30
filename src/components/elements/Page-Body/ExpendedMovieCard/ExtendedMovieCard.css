@@ -1,0 +1,7 @@
+.extended-movie-card-div{
+    border: 3px solid black;
+    height: 100%;
+    background-color: rgb(40, 40, 40);
+    border-top-right-radius: 15px;
+    border-bottom-right-radius: 15px;
+}
