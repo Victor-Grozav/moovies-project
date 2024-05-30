@@ -1,0 +1,16 @@
+.coming-soon-title-div{
+    display: flex;
+    font-size: 2rem;
+    font-weight: 200;
+    
+    color: rgb(248, 233, 204);
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+   margin-left: 10%;
+   text-shadow: 
+   -1px -1px 0 #4a4a4a,  
+    1px -1px 0 #4a4a4a,
+   -1px  1px 0 #4a4a4a,
+    1px  1px 0 #4a4a4a;
+    
+}

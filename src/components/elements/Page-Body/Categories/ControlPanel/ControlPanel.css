@@ -1,0 +1,42 @@
+.links-div {
+    border-top: 2px solid rgb(58, 53, 53);
+    
+    height: 25rem;
+    font-size: 1.5rem;
+    color: white;
+    display: flex;
+    flex-direction: row;
+    text-shadow: 
+        -1px -1px 0 #4a4a4a,  
+         1px -1px 0 #4a4a4a,
+        -1px  1px 0 #4a4a4a,
+         1px  1px 0 #4a4a4a;
+}
+
+.first-column {
+    margin-top: 40px;
+    margin-right: 4rem;
+    margin-left: 10%;
+}
+
+.second-column {
+    margin-top: 40px;
+    margin-left: 4rem;
+}
+
+.links-div p {
+    color: rgb(248, 233, 204);
+}
+
+.links-div a {
+    text-decoration: none; 
+    color: white; 
+}
+
+.links-div p:hover {
+    color: #ed5757; 
+}
+
+.links-div p:active {
+    color: #ed5757; 
+}

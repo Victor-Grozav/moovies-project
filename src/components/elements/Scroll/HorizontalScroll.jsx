@@ -7,13 +7,13 @@ function HorizontalScroll() {
 
     const scrollLeft = () => {
         if (scrollContainerRef.current) {
-            scrollContainerRef.current.scrollBy({ left: -300, behavior: 'smooth' });
+            scrollContainerRef.current.scrollBy({ left: -700, behavior: 'smooth' });
         }
     };
 
     const scrollRight = () => {
         if (scrollContainerRef.current) {
-            scrollContainerRef.current.scrollBy({ left: 300, behavior: 'smooth' });
+            scrollContainerRef.current.scrollBy({ left: 700, behavior: 'smooth' });
         }
     };
 
