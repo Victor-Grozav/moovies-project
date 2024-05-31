@@ -1,17 +1,14 @@
-import React from "react";
-import './CardMovie.css'
-import { movies } from "./JsonServer.js";
 
-function CardMovie() {
-    return (
-        <div className="card-movie-container">
-            {movies.map(movie => (
-                <div key={movie.id}>
-                    <img className="card-movie" src={movie.movie_banner} alt={movie.title} />
-                </div>
-            ))}
-        </div>
-    );
+import React from 'react';
+import './CardMovie.css';
+
+function CardMovie({ movie }) {
+  return (
+    <div className="card-movie">
+      <img src={movie.image} alt={movie.title} className="movie-poster" />
+      
+    </div>
+  );
 }
 
 export default CardMovie;
