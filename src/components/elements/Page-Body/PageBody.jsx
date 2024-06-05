@@ -3,11 +3,12 @@ import './PageBody.css'
 import Categories from './Categories/Categories.jsx'
 import ExtendedMovieCard from "./ExpendedMovieCard/ExtendedMovieCard.jsx";
 
-function PageBody ({movies}){
+
+function PageBody ({ movies, categories }){
     return(
         <div className="page-body-div">
-        <Categories movies={movies}/>
-        <ExtendedMovieCard movies={movies}/>
+        <Categories movies={movies} categories={categories}/>
+        <ExtendedMovieCard movies={movies} categories={categories}/>
         
         </div>
     )

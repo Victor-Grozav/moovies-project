@@ -7,7 +7,8 @@ import './App.css';
 
 function App() {
   const [movies, setMovies] = useState([]);
-
+  const [categories, setCategories] = useState([]);
+ 
   useEffect(() => {
     fetch('https://imdb-top-100-movies.p.rapidapi.com/', {
       method: 'GET',
@@ -29,11 +30,11 @@ function App() {
   return (
     <div className='background-all'>
       <div className='Application'>
-        <Header movies={movies} />
+        <Header movies={movies} categories={categories}/>
       </div>
       <div className='second-header'>
-        <HorizontalScroll movies={movies} />
-        <PageBody movies={movies} />
+        <HorizontalScroll movies={movies} categories={categories}/>
+        <PageBody movies={movies} categories={categories}/>
         <Footer />
       </div>
     </div>

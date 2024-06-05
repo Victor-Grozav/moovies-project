@@ -1,10 +1,10 @@
 import React from "react";
 import './ExtendedMovieCard.css'
-
-function ExtendedMovieCard (){
+import Filter from "./Filter/Filter.jsx"
+function ExtendedMovieCard ({ movies, categories }){
     return(
         <div className="extended-movie-card-div">
-        <p>Ceva</p>
+        <Filter movies={movies} categories={categories}/>
         </div>
     )
 }
