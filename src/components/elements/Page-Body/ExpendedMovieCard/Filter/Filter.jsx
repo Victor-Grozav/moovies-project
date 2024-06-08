@@ -1,23 +1,23 @@
+
 import React from "react";
 import "./Filter.css";
 
-function Filter({ movies }) {
-   
-    const genres = [...new Set(movies.flatMap(movie => movie.genre))];
-  
-    return (
-      <div>
-        <p>Filter</p>
-        <label htmlFor="genres">Choose a genre:</label>
-        <select id="genres" name="genres">
-          {genres.map((genre, index) => (
-            <option key={index} value={genre.toLowerCase()}>
-              {genre}
-            </option>
-          ))}
-        </select>
-      </div>
-    );
-  }
+function Filter({ movies, onGenreChange }) {
+  const genres = [...new Set(movies.flatMap((movie) => movie.genre))];
+
+  return (
+    <div className="filter-div">
+      <label htmlFor="genres">Choose a genre:</label>
+      <select id="genres" name="genres" onChange={(e) => onGenreChange(e.target.value)}>
+        <option value="">All Genres</option>
+        {genres.map((genre, index) => (
+          <option key={index} value={genre}>
+            {genre}
+          </option>
+        ))}
+      </select>
+    </div>
+  );
+}
 
 export default Filter;

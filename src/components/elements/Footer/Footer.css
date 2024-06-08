@@ -1,9 +1,12 @@
 .footer-div{
     border: 1px solid black;
     width: 94%;
-    height: 40rem;
+    height: 10rem;
     background-color: rgb(49, 49, 49);
     margin-top: 3rem;
     border-radius: 12px;
     margin-bottom: 5rem;
+    position:relative;
+    bottom: 0;
+    width: 95%;
 }

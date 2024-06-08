@@ -1,0 +1,30 @@
+.filter-div {
+    margin: 20px;
+    padding: 20px;
+    background-color: #5d5d5d;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+  }
+  
+  .filter-div label {
+    font-size: 1em;
+    color: #d9d6d6;
+    margin-right: 10px;
+  }
+  
+    .filter-div select {
+    padding: 10px;
+    border-radius: 5px;
+   
+    font-size: 1em;
+    background-color: #252525;
+    color: #ffffff;
+    transition: border-color 0.1s;
+  }
+  
+  .filter-div select:focus {
+    border-color: #cfb454;
+    outline: none;
+  }
+  

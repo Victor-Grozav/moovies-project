@@ -13,8 +13,8 @@ function App() {
     fetch('https://imdb-top-100-movies.p.rapidapi.com/', {
       method: 'GET',
       headers: {
-        'X-RapidAPI-Key': '60ab68b350msha9fe21cfff0059bp126ccdjsn1fc8c975a343',
-		'X-RapidAPI-Host': 'imdb-top-100-movies.p.rapidapi.com'
+        'x-rapidapi-key': 'a9778c4f45msh4cefbe02c0ef517p108a2bjsn6e923d26be93',
+		'x-rapidapi-host': 'imdb-top-100-movies.p.rapidapi.com'
       }
     })
       .then(response => response.json())
@@ -27,6 +27,8 @@ function App() {
       });
   }, []);
 
+  console.log(movies);
+
   return (
     <div className='background-all'>
       <div className='Application'>
@@ -34,9 +36,11 @@ function App() {
       </div>
       <div className='second-header'>
         <HorizontalScroll movies={movies} categories={categories}/>
-        <PageBody movies={movies} categories={categories}/>
-        <Footer />
+        <PageBody movies={movies} setMovies={setMovies} categories={categories}/>
+        
       </div>
+     
+      <Footer/>
     </div>
   );
 }
