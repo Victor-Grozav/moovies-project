@@ -16,7 +16,7 @@
 }
 
 .second-header{
-    
+  
     margin-top: 5rem;
     display: flex;
     flex-direction: column;
@@ -25,6 +25,6 @@
 .background-all{
    background-image: url(./assets/chicago-cinema.jpg);
    background-size: cover;
-   height: 220rem;
+   height: fit-content;
   
 }

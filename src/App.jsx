@@ -37,10 +37,10 @@ function App() {
       <div className='second-header'>
         <HorizontalScroll movies={movies} categories={categories}/>
         <PageBody movies={movies} setMovies={setMovies} categories={categories}/>
-        
+        <Footer/>
       </div>
      
-      <Footer/>
+      
     </div>
   );
 }
