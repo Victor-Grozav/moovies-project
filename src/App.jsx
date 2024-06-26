@@ -7,19 +7,21 @@ import './App.css';
 
 function App() {
   const [movies, setMovies] = useState([]);
+  const [filteredMovies, setFilteredMovies] = useState([]);
   const [categories, setCategories] = useState([]);
- 
+
   useEffect(() => {
     fetch('https://imdb-top-100-movies.p.rapidapi.com/', {
       method: 'GET',
       headers: {
         'x-rapidapi-key': 'a9778c4f45msh4cefbe02c0ef517p108a2bjsn6e923d26be93',
-		'x-rapidapi-host': 'imdb-top-100-movies.p.rapidapi.com'
+        'x-rapidapi-host': 'imdb-top-100-movies.p.rapidapi.com'
       }
     })
       .then(response => response.json())
       .then(data => {
         setMovies(data);
+        setFilteredMovies(data); 
         console.log(data);
       })
       .catch(error => {
@@ -27,20 +29,27 @@ function App() {
       });
   }, []);
 
-  console.log(movies);
+  const handleSearch = (query) => {
+    if (query === "") {
+      setFilteredMovies(movies); 
+    } else {
+      const filtered = movies.filter((movie) =>
+        movie.title.toLowerCase().includes(query.toLowerCase())
+      );
+      setFilteredMovies(filtered);
+    }
+  };
 
   return (
     <div className='background-all'>
       <div className='Application'>
-        <Header movies={movies} categories={categories}/>
+        <Header onSearch={handleSearch} />
       </div>
       <div className='second-header'>
-        <HorizontalScroll movies={movies} categories={categories}/>
-        <PageBody movies={movies} setMovies={setMovies} categories={categories}/>
+        <HorizontalScroll movies={filteredMovies} categories={categories}/>
+        <PageBody movies={filteredMovies} setMovies={setMovies} categories={categories}/>
         <Footer/>
       </div>
-     
-      
     </div>
   );
 }

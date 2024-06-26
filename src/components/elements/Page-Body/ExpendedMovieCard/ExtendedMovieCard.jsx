@@ -4,7 +4,7 @@ import Filter from "./Filter/Filter.jsx";
 import MovieCardBig from "./MovieCardBig/MovieCardBig.jsx";
 
 function ExtendedMovieCard({ movies }) {
-    const [filteredMovies, setFilteredMovies] = useState([]); 
+    const [filteredMovies, setFilteredMovies] = useState(movies); 
 
     
     useEffect(() => {

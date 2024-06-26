@@ -3,12 +3,13 @@ import SearchBar from "./search-component/SearchBar";
 import Logo from "./Logo-component/Logo";
 import "./header.modules.css";
 
-function Header() {
+function Header({ onSearch }) {
   return (
     <header className="header-component">
-      <SearchBar />
+      <SearchBar onSearch={onSearch} />
       <Logo />
     </header>
   );
 }
+
 export default Header;

@@ -8,7 +8,7 @@ function PageBody ({ movies, setMovies}){
     return(
         <div className="page-body-div">
         <Categories movies={movies}/>
-        <ExtendedMovieCard movies={movies} setMovies={setMovies}/>
+        <ExtendedMovieCard movies={movies} setMovies={setMovies} />
         
         </div>
     )
