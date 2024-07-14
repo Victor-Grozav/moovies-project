@@ -1,8 +1,10 @@
 import React, { useEffect, useState } from 'react';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import Header from './components/elements/Header/Header';
 import PageBody from './components/elements/Page-Body/PageBody';
 import HorizontalScroll from './components/elements/Scroll/HorizontalScroll';
 import Footer from './components/elements/Footer/Footer';
+import MovieDetail from './components/elements/MovieDetail/MovieDetail';
 import './App.css';
 
 function App() {
@@ -41,16 +43,21 @@ function App() {
   };
 
   return (
-    <div className='background-all'>
-      <div className='Application'>
-        <Header onSearch={handleSearch} />
+    <Router>
+      <div className='background-all'>
+        <div className='Application'>
+          <Header onSearch={handleSearch} />
+        </div>
+        <div className='second-header'>
+          <HorizontalScroll movies={filteredMovies} categories={categories}/>
+          <Routes>
+            <Route path="/" element={<PageBody movies={filteredMovies} setMovies={setMovies} categories={categories}/>} />
+            <Route path="/movie/:id" element={<MovieDetail movies={movies} />} />
+          </Routes>
+          <Footer/>
+        </div>
       </div>
-      <div className='second-header'>
-        <HorizontalScroll movies={filteredMovies} categories={categories}/>
-        <PageBody movies={filteredMovies} setMovies={setMovies} categories={categories}/>
-        <Footer/>
-      </div>
-    </div>
+    </Router>
   );
 }
 
