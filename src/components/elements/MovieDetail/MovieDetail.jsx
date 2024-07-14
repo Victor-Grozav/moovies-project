@@ -1,12 +1,11 @@
-// MovieDetail.js
-
 import React from 'react';
-import { useParams } from 'react-router-dom';
+import { useParams, useNavigate } from 'react-router-dom';
 import './MovieDetail.css';
-import PlayerVideo from './PlayerVideo'; 
+import PlayerVideo from './PlayerVideo';
 
 function MovieDetail({ movies }) {
   const { id } = useParams();
+  const navigate = useNavigate();
   const movie = movies.find((movie) => movie.id === id);
 
   if (!movie) {
@@ -15,6 +14,7 @@ function MovieDetail({ movies }) {
 
   return (
     <div className="movie-detail">
+      <button className="back-button" onClick={() => navigate(-1)}>Go Back</button>
       <h1>{movie.title}</h1>
       <img src={movie.image} alt={movie.title} />
       <div className="details">

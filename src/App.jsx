@@ -49,9 +49,13 @@ function App() {
           <Header onSearch={handleSearch} />
         </div>
         <div className='second-header'>
-          <HorizontalScroll movies={filteredMovies} categories={categories}/>
           <Routes>
-            <Route path="/" element={<PageBody movies={filteredMovies} setMovies={setMovies} categories={categories}/>} />
+            <Route path="/" element={
+              <>
+                <HorizontalScroll movies={filteredMovies} categories={categories} />
+                <PageBody movies={filteredMovies} setMovies={setMovies} categories={categories} />
+              </>
+            } />
             <Route path="/movie/:id" element={<MovieDetail movies={movies} />} />
           </Routes>
           <Footer/>
