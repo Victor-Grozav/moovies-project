@@ -16,7 +16,7 @@ const VideoPlayer = ({ movieTitle }) => {
             part: 'snippet',
             maxResults: 1,
             type: 'video',
-            key: 'YOUR_YOUTUBE_API_KEY', // Replace with your YouTube API key
+            key: 'AIzaSyDpHI2kGbtdB_zGJ4Y251dIxIZxBVMNWhg', 
           },
         });
 
@@ -36,7 +36,7 @@ const VideoPlayer = ({ movieTitle }) => {
   }, [movieTitle]);
 
   if (!videoId) {
-    return null; // Handle loading state or no video found
+    return null; 
   }
 
   return (
